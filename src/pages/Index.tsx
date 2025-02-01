@@ -4,6 +4,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import FloatingNav from "../components/FloatingNav";
+import ThemeToggle from "../components/ThemeToggle";
 
 const Index = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <ThemeToggle />
       <Hero />
       <Skills />
       <Projects />

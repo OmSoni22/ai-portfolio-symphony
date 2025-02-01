@@ -6,6 +6,27 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 160 84% 39%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 160 84% 39%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
     --card: 222 47% 11%;
@@ -23,7 +44,6 @@
     --border: 217 32% 17%;
     --input: 217 32% 17%;
     --ring: 160 84% 39%;
-    --radius: 0.5rem;
   }
 }
 
@@ -32,8 +52,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans;
-    background: linear-gradient(to bottom right, hsl(222 47% 11%), hsl(222 47% 11%), hsl(222 47% 11%));
+    @apply bg-background text-foreground font-sans transition-colors duration-300;
+    background: linear-gradient(to bottom right, 
+      hsl(var(--background)), 
+      hsl(var(--background)), 
+      hsl(var(--background)));
     background-attachment: fixed;
   }
 }
