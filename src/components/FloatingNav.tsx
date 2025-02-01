@@ -39,20 +39,20 @@ const FloatingNav = () => {
       transition={{ duration: 0.3 }}
       className="fixed bottom-8 right-8 z-50"
     >
-      <div className="bg-card border shadow-lg rounded-lg p-2">
+      <div className="backdrop-blur-xl bg-secondary/80 border border-border/50 shadow-lg rounded-lg p-2">
         <div className="flex flex-col items-center space-y-2">
           {sections.map((section) => (
             <button
               key={section.id}
               onClick={() => scrollToSection(section.id)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors px-4 py-1 rounded-md hover:bg-accent"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors px-4 py-1 rounded-md hover:bg-accent/50"
             >
               {section.label}
             </button>
           ))}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-primary hover:text-primary/80 transition-colors p-1 rounded-full hover:bg-accent"
+            className="text-primary hover:text-primary/80 transition-colors p-1 rounded-full hover:bg-accent/50"
           >
             <ChevronUp className="w-5 h-5" />
           </button>

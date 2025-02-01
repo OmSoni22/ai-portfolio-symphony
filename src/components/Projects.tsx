@@ -24,7 +24,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-20 px-4 bg-secondary" id="projects">
+    <section className="py-20 px-4 bg-secondary/50 backdrop-blur-sm" id="projects">
       <div className="container mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}
@@ -42,7 +42,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-hover bg-card p-6 rounded-lg border"
+              className="backdrop-blur-xl bg-secondary/80 p-6 rounded-lg border border-border/50 hover:border-primary/50 transition-colors"
             >
               <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
               <p className="text-muted-foreground mb-4">{project.description}</p>
@@ -50,7 +50,7 @@ const Projects = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs px-2 py-1 bg-secondary rounded-full text-secondary-foreground"
+                    className="text-xs px-2 py-1 bg-accent/50 rounded-full text-accent-foreground"
                   >
                     {tag}
                   </span>
@@ -59,7 +59,7 @@ const Projects = () => {
               <div className="flex gap-4">
                 <a
                   href={project.links.github}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -67,7 +67,7 @@ const Projects = () => {
                 </a>
                 <a
                   href={project.links.live}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
